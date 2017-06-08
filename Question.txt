@@ -1,0 +1,75 @@
+IN YOUR OWN WORDS!!
+
+1) What is React.js, and what makes it different from other framework/libraries like angular.js?
+** Is a declarative, efficient, and flexible JavaScript library for building user interfaces. ... Your components tell React what you want to render – then React will efficiently update and render just the right components when your data changes. Here, ShoppingList is a React component class, or React component type.
+  ** Initially released in 2009, the Google-backed AngularJS has since risen to become the incumbent JavaScript framework of choice for building dynamic single page applications (SPAs) on the web. On the other hand, React was developed and released by Facebook in 2013 and is the relative “new kid on the block.” It brings some revolutionary new innovations to the “view” component of the Model View Controller (MVC) architecture.
+
+2) In JSX, we can't use the "class" keyword. Why?
+**With react you have to use 'className' not class since class is a reserved JavaScript syntax.
+
+3)  Please provide a brief explanation of the virtual DOM.
+  **The Virtual DOM is a node tree that lists elements and their attributes and content as objects and properties.
+
+
+4) What is the difference between props and state?
+ ** The state is changeable
+ **The props should not change, and are passed into the component
+
+
+5) How do you update a component's state?
+**this.setState
+
+
+6) What happens when state changes?
+**The data is update.
+
+
+7) What is componentDidMount and how do you use it?
+**With componentDidMount() we start at the end and work our way back.
+
+
+8) What part of MVC is react most concerned with?
+** (V) views
+
+9) What are Prop Types and what good are they?
+**You can use prop-types to document the intended types of properties passed to components.
+
+
+10) Write a basic "Hello 'somename' " component in which you pass the name in as a prop. somename is a variable.
+** function Example(props){
+            return(
+                <div>
+                    <p>Hello<p>
+                    {this.props.somename}
+                </div>
+            );
+
+        }
+
+
+
+11) When would you use a class component over a functional component.
+**Go with functional if your component doesn't do much more than take in some props and render. You can think of these as pure functions because they will always render and behave the same, given the same props. Also, they don't care about lifecycle methods or have their own internal state.
+
+
+12) Why are keys important in React and what are they?
+**Using unique and constant keys - so not just unique in a single render run, but especially constant over multiple render-cycles - will ensure that everything works as intended, and will ensure react updates DOM efficiently.
+
+
+13) In which lifecycle method is it a good idea to make Ajax calls?
+** componentDidMount()
+
+
+14) How do you tell React to build in production mode?
+** "build": "NODE_ENV='production' webpack -p"
+
+
+15) What is wrong with the following code?
+
+this.setState((prevState, props) => {
+ return {
+   streak: prevState.streak + props.count
+ }
+})
+
+** You can't pass the props inside the setState, Should be only used in child component
